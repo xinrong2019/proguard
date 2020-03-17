@@ -10,10 +10,31 @@ plugins {
     id 'groovy'
     id 'java'
     id 'maven'
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '0.10.1'
 }
 
 repositories {
     mavenCentral()
+}
+
+version "0.1.0"
+
+pluginBundle {
+    website = 'https://www.baidu.com'
+    vcsUrl = 'https://github.com/baidu/uid-generator'
+    tags = ['proguard', 'plugin']
+}
+
+gradlePlugin {
+    plugins {
+        greetingsPlugin {
+            id = 'cc.ewell.plugin'
+            displayName = 'proguard'
+            description = 'An proguard gradle plugin for war file.'
+            implementationClass = 'cc.ewell.plugin.PluginImpl'
+        }
+    }
 }
 
 dependencies {
@@ -24,16 +45,16 @@ dependencies {
     compile 'net.sf.proguard:proguard-gradle:6.2.2'
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            //设置插件的GAV参数
-            pom.groupId = 'cc.ewell.plugin'//你的包名
-            pom.artifactId = 'proguard'
-            pom.version = '0.1.0'//版本号
-            //文件发布到下面目录  ../是父目录
-            repository(url: uri('../repo'))
-        }
-    }
-}
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //设置插件的GAV参数
+//            pom.groupId = 'cc.ewell.plugin'//你的包名
+//            pom.artifactId = 'proguard'
+//            pom.version = '0.1.0'//版本号
+//            //文件发布到下面目录  ../是父目录
+//            repository(url: uri('../repo'))
+//        }
+//    }
+//}
 
