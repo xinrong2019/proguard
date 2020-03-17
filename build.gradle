@@ -31,7 +31,7 @@ gradlePlugin {
         greetingsPlugin {
             id = 'cc.ewell.plugin'
             displayName = 'proguard'
-            description = 'An proguard gradle plugin for war file.'
+            description = 'A proguard gradle plugin for war file.'
             implementationClass = 'cc.ewell.plugin.PluginImpl'
         }
     }
