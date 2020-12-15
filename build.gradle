@@ -29,10 +29,10 @@ pluginBundle {
 gradlePlugin {
     plugins {
         greetingsPlugin {
-            id = 'cc.ewell.plugin'
+            id = 'com.kim.plugin'
             displayName = 'proguard'
             description = 'A proguard gradle plugin for war file.'
-            implementationClass = 'cc.ewell.plugin.PluginImpl'
+            implementationClass = 'com.kim.plugin.PluginImpl'
         }
     }
 }
@@ -49,7 +49,7 @@ dependencies {
 //    repositories {
 //        mavenDeployer {
 //            //设置插件的GAV参数
-//            pom.groupId = 'cc.ewell.plugin'//你的包名
+//            pom.groupId = 'com.kim.plugin'//你的包名
 //            pom.artifactId = 'proguard'
 //            pom.version = '0.1.0'//版本号
 //            //文件发布到下面目录  ../是父目录

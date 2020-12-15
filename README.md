@@ -8,11 +8,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'cc.ewell.plugin:proguard:0.1.0'
+        classpath 'com.kim.plugin:proguard:0.1.0'
     }
 }
 
 plugins {
-    id "cc.ewell.plugin" version "0.1.0"
+    id "com.kim.plugin" version "0.1.0"
 }
 ```

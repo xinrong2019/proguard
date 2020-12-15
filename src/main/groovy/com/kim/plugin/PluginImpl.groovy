@@ -1,4 +1,4 @@
-package cc.ewell.plugin
+package com.kim.plugin
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
